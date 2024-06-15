@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """Server for multithreaded (asynchronous) chat application."""
 import os
-import socket
 import threading
-import time
 from threading import Thread
 from pathlib import Path
 import QuicFunc

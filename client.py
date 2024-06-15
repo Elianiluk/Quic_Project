@@ -1,6 +1,4 @@
 """Client for the UDP-based chat application."""
-import socket
-import time
 from threading import Thread
 from tkinter import *
 from tkinter import filedialog
@@ -211,7 +209,7 @@ def sendattach():
         entry_package = QuicPackage(0, entry,CONNECTION_ID)
         ack_list.append(entry_package.seq)
         QuicFunc.send_package(entry_package, client_socket, SERVER_ADDR)
-        QuicFunc.send_packages_from_file(file1, client_socket, SERVER_ADDR, packages_list, no_acks,CONNECTION_ID)
+        QuicFunc.send_packages_from_file(file1, client_socket, SERVER_ADDR, packages_list, no_acks, CONNECTION_ID)
 
 
 

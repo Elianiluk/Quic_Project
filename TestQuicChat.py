@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 import socket
 import QuicFunc
 from QuicPackage import QuicPackage
@@ -41,7 +41,7 @@ class TestQuicChat(unittest.TestCase):
             self.assertEqual(receive_package.payload, "Complete Cycle Test")
 
             # Simulating sending an ACK
-            QuicFunc.send_package(QuicPackage(0, "ACK",1), mock_socket, self.client_address)
+            QuicFunc.send_package(QuicPackage(0, "ACK", 1), mock_socket, self.client_address)
             self.assertTrue(mock_socket.sendto.called)
 
     def test_edge_case_package_handling(self):
